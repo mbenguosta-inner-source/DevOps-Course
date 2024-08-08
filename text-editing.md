@@ -71,4 +71,14 @@ Save
 ```sh
 :x
 ```
+## Replacing text
+
+add lines numbers
+```sh
+:set number
+```
+Change port 8080 to 3000 on line
+```sh
+:
+```
 
