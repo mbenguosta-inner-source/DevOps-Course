@@ -77,8 +77,13 @@ add lines numbers
 ```sh
 :set number
 ```
-Change port 8080 to 3000 on line
+Change port 8080 to 3000 on line 15
 ```sh
-:
+:15s/8080/3000
+```
+
+Save
+```sh
+:x
 ```
 
