@@ -82,8 +82,8 @@ Change port 8080 to 3000 on line 15
 :15s/8080/3000
 ```
 
-Save
+Update word test to lab in entire file
 ```sh
-:x
+:%s/test/lab/gci
 ```
 
