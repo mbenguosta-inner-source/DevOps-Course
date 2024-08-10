@@ -7,7 +7,7 @@ vim app.js
 Navigate to the end of the file
 
 ```sh
-Shift +g
+Shift +w
 ```
 
 Navigate to the end of the line
