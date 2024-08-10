@@ -44,6 +44,17 @@ Shift +m
 Navigate word by word
 
 ```sh
+Shift +w
+```
+
+Navigate top file
+
+```sh
+Shift +gg
+```
+Navigate at the bottom
+
+```sh
 Shift +g
 ```
 
