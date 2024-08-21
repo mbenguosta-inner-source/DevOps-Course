@@ -74,10 +74,6 @@ file1
 file2
 ...
 ```
-## Difference between docker and vm
-
-Container: application only<br>
-VM: Application +  Os kernel 
 
 ## Docker debugging (for log viewing for example)
 
@@ -101,7 +97,7 @@ docker commit --change "ENV DEBUG=true" [CONTAINER ID] [NEW CONTAINER TAG]
 ```
 ## Docker network
 
-It isolates docker image and enable container communication using container name.<br>
+It isolates docker containers and enable container communication using container name.<br>
 
 list default docker network<br>
 ```sh
@@ -146,7 +142,7 @@ docker run -d \
   --mount source=/home/<user>/data,destination=/data/db \
   mongo
 ```
-Note: /home/<user>/data is just an example. You can choose another folder to store data<br>
+Note: /home/user/data is just an example. You can choose another folder to store data<br>
 
 
 ## Share Container images
@@ -173,3 +169,7 @@ docker push [YOUR ID]/[IMAGE NAME]:[IMAGE VERSION]
 ```
 
 
+Recommendation: 
+1- Use alpine version of base image for less image and more security
+2- Copy dependencies file and install then before copying the code to the container image.
+3-adopt tag format [YOUR ID]/[IMAGE NAME]:V$.$.$ where $ is a digit 
