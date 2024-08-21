@@ -169,7 +169,7 @@ docker push [YOUR ID]/[IMAGE NAME]:[IMAGE VERSION]
 ```
 
 
-Recommendation: 
-1- Use alpine version of base image for less image and more security <br>
-2- Copy dependencies file and install then before copying the code to the container image. <br>
-3-adopt tag format [YOUR ID]/[IMAGE NAME]:V$.$.$ where $ is a digit  <br>
+Recommendation:  <br> <br>
+1- Use alpine version of base image for less image and more security <br> <br>
+2- Copy dependencies file and install then before copying the code to the container image. <br> <br>
+3-adopt tag format [YOUR ID]/[IMAGE NAME]:V$.$.$ where $ is a digit  <br> <br>
