@@ -1,0 +1,10 @@
+// my dockerfile
+from node:10-alpine
+
+run mkdir -p /home/node/app/node_modules && chown -r node:node /home/node/app
+
+workdir /home/node/app
+
+copy package*.json ./
+// User in this test
+USER node

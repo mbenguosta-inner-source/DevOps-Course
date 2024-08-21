@@ -1,0 +1,54 @@
+version: "3.8"
+
+
+
+services:
+  database:
+    image: mongo
+    restart: unless-stopped
+    env_file: ./.env
+    container_name: database
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=$DATABASE_USER
+      - MONGO_INITDB_ROOT_PASSWORD=$DATABASE_PASSWORD
+    ports:
+      - $DATABASE_LOCAL_PORT:$DATABASE_DOCKER_PORT
+    volumes:
+    #  - ./volume:/data/db
+      - db_volume:/data/db
+    networks:
+      - app-networks
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: user
+      ME_CONFIG_MONGODB_ADMINPASSWORD: passer
+      ME_CONFIG_MONGODB_URL: mongodb://user:passer@database:27017/
+      ME_CONFIG_BASICAUTH: false
+    networks:
+      - app-networks
+  backend:
+    depends_on:
+      - database
+    image: mbenguosta/backend:v1.0.0
+    restart: unless-stopped
+    container_name: backend
+    env_file: ./.env
+    ports:
+      - $APP_LOCAL_PORT:$APP_DOCKER_PORT
+    environment:
+      - DATABASE_HOST=$DATABASE_HOST
+      - DATABASE_USER=$DATABASE_USER
+      - DATABASE_PASSWORD=$DATABASE_PASSWORD
+      - DATABASE_PORT=$DATABASE_PORT
+    networks:
+      - app-networks
+
+networks:
+  app-networks:
+
+volumes:
+  db_volume:
