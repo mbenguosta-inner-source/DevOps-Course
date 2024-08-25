@@ -1,5 +1,5 @@
 # Container Orchestration
-[Docker compose](https://docs.docker.com/compose/)
+[Docker compose docs](https://docs.docker.com/compose/)
 
 ### Run compose
 ```sh
