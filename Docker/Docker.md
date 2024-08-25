@@ -8,7 +8,7 @@ docker init
 docker start
 docker stop
 ```
-1- Lunch docker image
+1- Interactive container creation
 ```sh
 docker pull postgres
 docker run postgres
