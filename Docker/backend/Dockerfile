@@ -4,7 +4,7 @@ FROM python:3.9
 # Create main directory from where we work
 WORKDIR /code
 
-# Copy resuirements file
+# Copy requirements file
 COPY ./requirements.txt /code/requirements.txt
 
 # Install requirements from requirement.txt copied in the above step
