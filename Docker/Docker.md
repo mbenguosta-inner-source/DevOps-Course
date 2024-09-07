@@ -87,6 +87,14 @@ Connect to container
 docker exec -it [CONTAINER ID] /bin/bash
 docker exec -it [CONTAINER NAME] /bin/bash
 ```
+
+Update app.py
+```sh
+#format
+sed -i 's/[Old_string]/[New_string]/' [FileName]
+sed 's/Welcome to this fantastic app/Welcome to app Ibrahima/' app.py
+```
+
 ## Commit container changes
 ```sh
 docker commit [CONTAINER ID] [NEW CONTAINER TAG]
@@ -127,7 +135,7 @@ docker volume create \
     my_volume
   ```
 
-Create docker volume
+List docker volume
 ```sh
 docker volume ls
 ```
