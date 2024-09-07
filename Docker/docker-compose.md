@@ -28,5 +28,5 @@ docker-compose rm
 ### Stop and remove containers, images and volumes created previously by compose
 
 ```sh
-docker-compose rm 
+docker-compose down 
 ```
