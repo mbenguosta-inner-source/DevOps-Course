@@ -117,6 +117,16 @@ Create docker volume
 ```sh
 docker volume create my-volume
 ```
+
+With mountpoint
+```sh
+docker volume create \
+    --opt type=none \
+    --opt o=bind \
+    --opt device=/path/on/host \
+    my_volume
+  ```
+
 Create docker volume
 ```sh
 docker volume ls
@@ -124,11 +134,18 @@ docker volume ls
 
 Inspect volume
 ```sh
-docker volume inspect my-vol
+docker volume inspect my_volume
 ```
 
 Mount volume (case mongo DB)
 ```sh
+docker run -d \
+  --name=mongo \
+  -p 27017:27017 \
+  -v my-volume:/data/db \
+  mongo
+
+#Or
 docker run -d \
   --name=mongo \
   -p 27017:27017 \
