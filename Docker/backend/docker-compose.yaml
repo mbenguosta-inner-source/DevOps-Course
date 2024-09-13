@@ -1,7 +1,6 @@
 version: "3.8"
 
 
-
 services:
   database:
     image: mongo
@@ -18,11 +17,10 @@ services:
       - db_volume:/data/db
     networks:
       - app-networks
-
   backend:
     depends_on:
       - database
-    image: mbenguosta/backend:v1.0.0
+    image: ehmboup/backend:v2.0.0
     restart: unless-stopped
     container_name: backend
     env_file: ./.env
