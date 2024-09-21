@@ -6,6 +6,7 @@ client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_DETAILS)
 database = client.employees
 employee_collection = database.get_collection("employees_collection")
 
+
 def employee_helper(employee) -> dict:
     return {
         "id": str(employee["_id"]),
