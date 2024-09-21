@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: nginx-deployment
   labels:
-    app: nginx-dpl
+    app: nginx
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nginx
+      app: nginx #matchLabel: Label of the deployment  for service linking
   template:
     metadata:
       labels:
-        app: nginx
+        app: nginx #Template label (Should match to the selector matchLabels) 
     spec:
       containers:
       - name: nginx
