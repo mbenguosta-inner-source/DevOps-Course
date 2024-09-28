@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mongodb-pv
+  labels:
+    type: local
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: local-storage   # Must match the StorageClass name
+  local:
+    path: /mnt/data/mongodb         # Directory on the host (replace with your desired path)
+  nodeAffinity:                     # Ensure the volume is tied to a specific node
+    required:
+      nodeSelectorTerms:
+        - matchExpressions:
+            - key: kubernetes.io/hostname
+              operator: In
+              values:
+                - minikube        # Replace with the actual node name where this PV resides
+  persistentVolumeReclaimPolicy: Retain

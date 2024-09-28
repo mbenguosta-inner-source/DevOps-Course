@@ -17,6 +17,7 @@ sudo minikube config set vm-driver none
 Now start Minikube
 ```sh
 minikube start --driver=docker
+minikube start --driver=docker  --cpus=4 --memory=8192
 ```
 Enable Users to Manage Environments
 For the developers to manage their own environments, they need to own certain directories. Let's give them ownership with this:

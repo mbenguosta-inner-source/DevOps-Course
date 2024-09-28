@@ -2,17 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
+  namespace: nginx-ns
   labels:
     app: nginx
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nginx #matchLabel: Label of the deployment  for service linking
+      app: nginx
   template:
     metadata:
       labels:
-        app: nginx #Template label (Should match to the selector matchLabels) 
+        app: nginx
     spec:
       containers:
       - name: nginx
