@@ -1,5 +1,5 @@
 # Base image from docker hub
-FROM python:3.9
+FROM python:3.9-alpine
 
 # Create main directory from where we work
 WORKDIR /code

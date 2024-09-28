@@ -29,10 +29,10 @@ spec:
                 secretKeyRef:
                   name: mongodb-secret
                   key: mongodb-root-password
-          volumeMounts:
-            - name: mongodb-storage
-              mountPath: /data/db   # Default MongoDB data directory
-      volumes:
-        - name: mongodb-storage
-          persistentVolumeClaim:
-            claimName: mongodb-pvc   # PVC defined earlier
+      #     volumeMounts:
+      #       - name: mongodb-storage
+      #         mountPath: /data/db   # Default MongoDB data directory
+      # volumes:
+      #   - name: mongodb-storage
+      #     persistentVolumeClaim:
+      #       claimName: mongodb-pvc   # PVC defined earlier
