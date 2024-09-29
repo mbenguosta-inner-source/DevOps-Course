@@ -12,5 +12,5 @@
 | 8        | Configure your deployment with 2 additional replicas, each replica runs in different node: use `minikube start --nodes 3 --driver=docker` to launch 3 nodes. |
 | 9        | Add a BusyBox init container to check the database service availability before scheduling the backend application. |
 | 10        | Expose the backend server as a NodePort service. The NodePort port should be between `30000` and `30080`. |
-| 10        | Submit your job with this form: https://forms.gle/gLH4cBPi4jomnAwh8 |
+| 11        | Submit your job with this form: https://forms.gle/gLH4cBPi4jomnAwh8 |
 
