@@ -11,6 +11,7 @@
 | 7        | Configure your deployment to consume resources between: `64Mi memory & 250m CPU ` and `128Mi memory & 500m CPU ` |
 | 8        | Configure your deployment with 2 additional replicas, each replica runs in different node: use `minikube start --nodes 3 --driver=docker` to launch 3 nodes. |
 | 9        | Add a BusyBox init container to check the database service availability before scheduling the backend application. |
-| 10        | Expose the backend server as a NodePort service. The NodePort port should be between `30000` and `30080`. |
-| 11        | Submit your job with this form: https://forms.gle/gLH4cBPi4jomnAwh8 |
+| 10        | Create network policies to allow only database connection from your backend application. |
+| 11        | Expose the backend server as a NodePort service. The NodePort port should be between `30000` and `30080`. |
+| 12        | Submit your job with this form: https://forms.gle/gLH4cBPi4jomnAwh8 |
 
