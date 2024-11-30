@@ -9,7 +9,7 @@ Choose one of the following projects:
 2-  Host it to dockerHub<br>
 3- deploy in a cloud serverless container service ( Azure Container App or ECS or Google Cloud Run)<br>
 
-Note: Do it in 3 separated jobs.<br><br><br>
+Note: Do it in 2 or 3 separated jobs.<br><br><br><br>
 
 
 ### Option 2:<br><br>
@@ -17,7 +17,7 @@ Note: Do it in 3 separated jobs.<br><br><br>
 2- Build your app (without docker)<br>
 3- Deploy it to Heroku<br>
 
-Note: Do it in 3 separated jobs.<br><br><br><br>
+Note: Do it in 2 or 3 separated jobs.<br><br><br><br>
 
 
 # PROJECT 2 : 
@@ -40,6 +40,8 @@ The module should contains ``` variables.tf ```, ``` main.tf ``` and ``` output.
 In the ``` output.tf ``` retrieve cluster name and id <br>
 
 Add a ``` clusters.tf ``` file in the root directory and add  two ``` kub-module ``` implementations to create ``` cluster1 ``` and ``` cluster2 ```<br><br><br>
+
+You can use terratest to test your modules
 
 
 ## Submit your job with the following gForm <br>
